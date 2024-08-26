@@ -2,8 +2,8 @@ import java.util.Scanner;
 /**
  * This application converts between various units of measurement.
  *
- * @author Tim Gesell
- * @version 8/21/2022
+ * @author Tvarita Mathur
+ * @version 8/26/2024
  */
 public class Conversions
 {
@@ -17,6 +17,8 @@ public class Conversions
         System.out.println("4. Meters to Feet");
         System.out.println("5. Ounces to Milliliters");
         System.out.println("6. Milliliters to Ounces");
+        System.out.println("7. Cups to Tablespoons");
+        System.out.println("8. Tablespoons to Teaspoons");
         //Add 2 more conversions, each both ways, to add choices 7, 8, 9, and 10.
         //You can add even more if you would like.
 
@@ -33,8 +35,60 @@ public class Conversions
         }
         if (selection == 2)
         {
-            //add the code to ask the user to enter Fahrenheit and then convert to Celsius
+            System.out.println("Enter Fahrenheit: ");
+            double fahrenheit = keyboard.nextDouble();
+            keyboard.nextLine();
+            double celsius = 5/9*(fahrenheit - 32);
+            System.out.println(fahrenheit + " degrees fahrenheit is " + celsius + " degrees celsius");//add the code to ask the user to enter Fahrenheit and then convert to Celsius
         }
-        //add more if statements here.
+        if (selection == 2)
+        {
+            System.out.println("Enter Fahrenheit: ");
+            double fahrenheit = keyboard.nextDouble();
+            keyboard.nextLine();
+            double celsius = 5/9*(fahrenheit - 32);
+            System.out.println(fahrenheit + " degrees fahrenheit is " + celsius + " degrees celsius");//add the code to ask the user to enter Fahrenheit and then convert to Celsius
+        }
+        if (selection == 3)
+        {
+            System.out.println("Enter Feet: ");
+            double feet = keyboard.nextDouble();
+            keyboard.nextLine();
+            double meters = feet/ 3.281;            
+            System.out.println(feet + " feet is " + meters + " meter(s)");
+        }
+        if (selection == 4)
+        {
+            System.out.println("Enter Meters: ");
+            double meters = keyboard.nextDouble();
+            keyboard.nextLine();
+            double feet = meters*3.281;
+            System.out.println(meters + " meter(s) is " + feet + " feet");
+        }
+        if (selection == 5)
+        {
+            System.out.println("Enter Ounces: ");
+            double ounces = keyboard.nextDouble();
+            keyboard.nextLine();
+            double milliliters = ounces *  29.574;
+            System.out.println(ounces + " oz is " + milliliters + " ml");
+        }
+        if (selection == 6)
+        {
+            System.out.println("Enter Milliliters: ");
+            double milliliters = keyboard.nextDouble();
+            keyboard.nextLine();
+            double ounces = milliliters /  29.574;
+            System.out.println(milliliters + " ml is " + ounces + " oz");
+        }
+        if (selection == 7)
+        {
+            System.out.println("Enter Cups: ");
+            double cups = keyboard.nextDouble();
+            keyboard.nextLine();
+            double tablespoons = cups*16;
+            System.out.println(milliliters + " ml is " + ounces + " oz");
+        }
+
     }
 }
