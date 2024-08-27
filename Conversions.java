@@ -87,8 +87,15 @@ public class Conversions
             double cups = keyboard.nextDouble();
             keyboard.nextLine();
             double tablespoons = cups*16;
-            System.out.println(milliliters + " ml is " + ounces + " oz");
+            System.out.println(cups + " cups are " + tablespoons + " tbs");
         }
-
+        if (selection == 8)
+        {
+            System.out.println("Enter Tablespoons: ");
+            double tablespoons = keyboard.nextDouble();
+            keyboard.nextLine();
+            double teaspoons = tablespoons*3;
+            System.out.println(tablespoons + " tbs are " + teaspoons + " tsp");
+        }
     }
 }
