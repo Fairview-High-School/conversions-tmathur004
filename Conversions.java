@@ -18,7 +18,9 @@ public class Conversions
         System.out.println("5. Ounces to Milliliters");
         System.out.println("6. Milliliters to Ounces");
         System.out.println("7. Cups to Tablespoons");
-        System.out.println("8. Tablespoons to Teaspoons");
+        System.out.println("8. Tablespoons to Cups");
+        System.out.println("9. Teaspoons to Tablespoons");
+        System.out.println("10. Tablespoons to Teaspoons");
         //Add 2 more conversions, each both ways, to add choices 7, 8, 9, and 10.
         //You can add even more if you would like.
 
@@ -91,11 +93,27 @@ public class Conversions
         }
         if (selection == 8)
         {
+            System.out.println("Enter Tablespoon: ");
+            double tablespoons = keyboard.nextDouble();
+            keyboard.nextLine();
+            double cups = tablespoons/16;
+            System.out.println(tablespoons + " tbs are " + cups + " cups");
+        }
+        if (selection == 9)
+        {
             System.out.println("Enter Tablespoons: ");
             double tablespoons = keyboard.nextDouble();
             keyboard.nextLine();
             double teaspoons = tablespoons*3;
             System.out.println(tablespoons + " tbs are " + teaspoons + " tsp");
+        }
+         if (selection == 10)
+        {
+            System.out.println("Enter Teaspoons: ");
+            double teaspoons = keyboard.nextDouble();
+            keyboard.nextLine();
+            double tablespoons = teaspoons/3;
+            System.out.println(teaspoons + " tsp are " + tablespoons + " tbs");
         }
     }
 }
